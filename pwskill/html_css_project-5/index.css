@@ -11,6 +11,7 @@ nav ul{
     list-style: none;
     justify-content: right;
     padding-right:1%;
+    background-color: rgb(17, 23, 51);
 }
 
 #home{
@@ -64,8 +65,22 @@ h1{
     align-items: center;
 }
 
-.pprojects_grid{
+.projects_grid{
 display: grid;
 grid-template-columns: 1fr 1fr;
+justify-content: center;
+align-items: center;
+padding: 20px;
+}
 
+.socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+.socials img {
+    height: 20px;
+    margin-bottom: 50px;
+    
 }
