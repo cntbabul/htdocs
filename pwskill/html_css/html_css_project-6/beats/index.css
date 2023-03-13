@@ -1,0 +1,41 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    background-color:#0f0f10;
+    color: white;
+    box-sizing: border-box;
+    font-family:  "Poppins", sans-serif;
+    align-items: center;
+}
+body{margin: 0 15%;}
+
+.nav-ul{list-style: none;
+display:flex;
+gap: 7.5%;}
+
+.nav-right-section{display: flex;}
+nav div button{
+    margin-left: 100px;
+    padding: 10px 35px;
+    border-radius: 5px;
+}
+
+
+.nav-bar{
+    padding-top: 30px;
+    display: flex;
+    align-items:flex-end;
+    justify-content: space-between;
+}
+
+/* nav div ul{
+    list-style: none;
+    
+}
+nav ul li {
+    padding: 0px 15px;
+}
+body {
+    margin: 0 15%;
+  } */
+  
