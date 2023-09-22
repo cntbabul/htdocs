@@ -28,3 +28,6 @@ const higherOrder = n => {
 };
 
 console.log(higherOrder(2)(3)(4));
+//===============================================
+
+
