@@ -1,16 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+//import { useState } from 'react'
 
-function App() {
-  const [count, setCount] = useState(0)
+import Header from "./components/Header/header"
+import Home from "./components/Home/home"
+import Footer from "./components/Footer/footer"
+
+
+
+function App () {
+  // const [count, setCount] = useState(0)
 
   return (
     <>
-     <h1>tailwind with vite</h1>
-    </>
+    {/* <Header/>
+    <Home/>
+    <Footer/> */}
+     </>
+    
   )
-}
 
+}
 export default App
