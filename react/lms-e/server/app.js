@@ -31,4 +31,6 @@ app.all('*', (req,res) => {
     res.status(404).send('OOPS! 404 not found')
 });
 
+app.use(errorMiddleware);
+
 export default app;

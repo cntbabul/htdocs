@@ -1,27 +1,29 @@
+// import './App.css';
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import ProtectedRoute from "./components/Routes/ProtectedRoute";
-import PublicRoute from "./components/Routes/PublicRoute";
-import Donar from "./pages/Dashboard/Donar";
-import Hospitals from "./pages/Dashboard/Hospitals";
-import OrganisationPage from "./pages/Dashboard/OrganisationPage";
-import Consumer from "./pages/Dashboard/Consumer";
-import Donation from "./pages/Donation";
-import Analytics from "./pages/Dashboard/Analytics";
-import DonarList from "./pages/Admin/DonarList";
-import HospitalList from "./pages/Admin/HospitalList";
-import OrgList from "./pages/Admin/OrgList";
-import AdminHome from "./pages/Admin/AdminHome";
+// import { ToastContainer } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
+//import ProtectedRoute from "./components/Routes/ProtectedRoute";
+//import PublicRoute from "./components/Routes/PublicRoute";
+// import Donar from "./pages/Dashboard/Donar";
+// import Hospitals from "./pages/Dashboard/Hospitals";
+// import OrganisationPage from "./pages/Dashboard/OrganisationPage";
+// import Consumer from "./pages/Dashboard/Consumer";
+// import Donation from "./pages/Donation";
+// import Analytics from "./pages/Dashboard/Analytics";
+// import DonarList from "./pages/Admin/DonarList";
+// import HospitalList from "./pages/Admin/HospitalList";
+// import OrgList from "./pages/Admin/OrgList";
+// import AdminHome from "./pages/Admin/AdminHome";
 function App() {
   return (
-    <>
-      <ToastContainer />
+    <div>
+      {/* <ToastContainer /> */}
       <Routes>
-        <Route
+        {/* <Route
           path="/admin"
           element={
             <ProtectedRoute>
@@ -36,23 +38,23 @@ function App() {
               <DonarList />
             </ProtectedRoute>
           }
-        />
-        <Route
+        /> */}
+        {/* <Route
           path="/hospital-list"
           element={
             <ProtectedRoute>
               <HospitalList />
             </ProtectedRoute>
           }
-        />
-        <Route
+        /> */}
+        {/* <Route
           path="/org-list"
           element={
             <ProtectedRoute>
               <OrgList />
             </ProtectedRoute>
           }
-        />
+        /> 
 
         <Route
           path="/hospital"
@@ -101,7 +103,7 @@ function App() {
               <Donar />
             </ProtectedRoute>
           }
-        />
+        />*/}
         <Route
           path="/"
           element={
@@ -127,7 +129,7 @@ function App() {
           }
         />
       </Routes>
-    </>
+    </div>
   );
 }
 
