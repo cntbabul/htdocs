@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Signup/Login form</title>
+
+    
+   <style>
+       form {
+      padding:  70px;
+      margin: auto;
+      box-shadow: 5px 2px 5px #f5f5f5; 
+      background: #f5f5f5; 
+      
+      width: 500px;
+      background-color: rgb(139, 176, 245);
+    
+      }
+     
+      input, textarea {
+      width: calc(100% - 18px);
+      padding: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #c9271c;
+      outline: none;
+      }
+      input::placeholder {
+      color: #666;
+      }
+      button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background: #1c87c9; 
+      font-size: 16px;
+      
+      color: #fff;
+      }
+      button:hover {
+      background: #14a338;
+      }    
+     
+       .form_headline{
+        color: #f1db0d;
+        text-align: center;
+       }
+     </style>
+  </head>
+
+
+
+  <body>
+   
+      <form action="/">
+        <h1 class="form_headline">Sign up</h1>
+        <div class="info">
+          <input class="Registration_no" type="text" name="registration_no" placeholder="Enter Yoyr registration Number">
+          <input class="full_name" type="text" name="fullname" placeholder="Full name">
+          <input type="text" name="email" placeholder="Email">
+          <input type="text" name="name" placeholder="Phone number">
+          <input type="password" name="password" placeholder="create password">
+          <input type="password" name="password" placeholder="confirm password">
+          
+        </div>
+        <p>Message</p>
+        <div>
+          <textarea rows="2" placeholder="your message here"></textarea>
+        </div>
+        <button type="submit" href="/">Signup</button>
+      </form>
+    </div>
+  </body>
+  </html>
