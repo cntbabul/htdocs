@@ -1,1 +1,92 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.navbar{
+    padding: 10px 10px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content:space-between;
+    font-size: larger;
 
+}
+.navbar-list{
+    list-style: none;
+    display: flex;
+    gap: 10%;
+}
+.button{
+    background-color: rgb(29, 129, 102);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: aliceblue;
+}
+.searchbox-navbar{
+    border-radius: 2px;
+    padding: 5px;
+}
+.main{
+    display: flex;
+    justify-content: space-around;
+}
+.main-heading>h1>span{
+    color: rgb(29, 129, 102);
+    font: size 100px;
+    font-weight: 1000;
+}
+.main-left-content span{
+    color: rgb(29, 129, 102);
+    font-weight: 1000;
+}
+.main-right-logo img{
+    border-radius: 50%;
+    height: 240px;
+}
+
+.main{
+    display: flex;
+    padding-top: 100px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main-right .main-left{
+   width: 50%;
+    display: flex;
+    align-items: center;
+}
+.main-right {
+    display:flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    justify-content:end;
+}
+.main-right-button>input{
+    display: flex;
+  align-items: center;
+  /* gap: 30px; */
+}
+
+
+footer {
+    font-weight: 600;
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-around;
+  }
+  
+  footer ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
