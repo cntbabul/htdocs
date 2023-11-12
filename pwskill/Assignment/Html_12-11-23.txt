@@ -1,0 +1,1 @@
+1. What are Inline and Block elements in HTML and the difference between them? Name a few Inline elements?
