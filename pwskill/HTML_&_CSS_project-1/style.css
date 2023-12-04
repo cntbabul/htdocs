@@ -66,3 +66,11 @@ button{
     display: flex;
     justify-content: center;
   }
+
+
+
+.scroll {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+}
