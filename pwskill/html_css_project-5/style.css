@@ -17,8 +17,8 @@ img{cursor: pointer;}
     padding-right:1%;
     gap: 10px;
     list-style:none ;
-    margin-top: 10px;
-    padding-top: 10px;
+    margin-top: 5px;
+    padding-top: 5px;
 }
 
 #home{
@@ -123,8 +123,12 @@ img[alt="intro_image"]{
             align-items: center;
             justify-content: center;
             row-gap: 30px;
-             column-gap:30px; 
+            column-gap:30px; 
+            /* width: 75vw; */
             
+        }
+        img[alt="project-image"]{
+            width: 33vw;
         }
 
 
