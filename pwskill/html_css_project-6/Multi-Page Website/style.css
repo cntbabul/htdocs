@@ -1,0 +1,90 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5%  25% 1.5% 12%;
+    font-size: large;
+    font-weight: 800;
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.nav-list{
+    list-style: none;
+    display: flex;
+    cursor: pointer;
+}
+
+.nav-left{cursor: pointer;}
+.nav-right{
+    display: flex;
+    gap: 20px;
+    float: right;
+}
+
+
+.main{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    height: 90vh;
+    gap: 35%;
+}
+.main-left{
+    background-image: url("./assets/stethoscope.png");
+    align-items: center;
+}
+.main-left h1{
+    font-size: 60px;
+    margin-bottom: 3%;
+}
+.main-left p{
+    color: rgb(96, 92, 92);
+}
+.main-left img[alt="bottom-angle"]{
+    float: right;
+    /* margin-bottom: 50px; */
+   
+}
+
+.main-left button{
+    background-color:#22bc7e;
+    padding: 20px 35px;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 800;
+    border-radius: 50px;
+    border: none;
+    margin-top:10vh ;
+}
+.greenBox,
+.yellowBox {
+  position: absolute;
+  right: 0;
+}
+
+.greenBox {
+  width: 35%;
+  bottom: 30px;
+}
+
+.yellowBox {
+  width: 30%;
+  bottom: 50px;
+}
+
+.doctor {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 90%;
+    z-index: 2;
+  }
