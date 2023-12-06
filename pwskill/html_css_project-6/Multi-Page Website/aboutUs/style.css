@@ -43,9 +43,19 @@
     height: 8vw;
     width:15vw;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     /* border-style:solid; */
    
     /* font-family: 'Hedvig Letters Sans', sans-serif; */
-    box-shadow: 2px 2px 2px 7px rgb(104, 100, 100);
+    box-shadow: 0px 0px 10px black;
+}
+.bx{
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
