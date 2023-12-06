@@ -7,7 +7,7 @@
 .navbar{
     display: flex;
     justify-content: space-between;
-    margin: 1.5%  25% 1.5% 12%;
+    margin: 2.5%  25% 1.5% 12%;
     font-size: large;
     font-weight: 800;
 }
@@ -28,6 +28,10 @@
     gap: 20px;
     float: right;
 }
+a {
+    text-decoration: none;
+    color: black;
+  }
 
 
 .main{

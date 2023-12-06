@@ -14,39 +14,7 @@
     margin: auto;
   }
   
-  nav {
-    height: 15vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 5%;
-  }
-
-  nav img {
-    width: 150px;
-  }
   
-
-  nav ul {
-    display: flex;
-    align-items: center;
-  }
-  
-  nav ul li {
-    list-style: none;
-    margin-right: 50px;
-    font-weight: 600;
-  }
-  
-  nav ul li:first-child {
-    font-weight: 700;
-    color: #20bc7e;
-  }
-  
-  a {
-    text-decoration: none;
-    color: black;
-  }
 
   
   main{
