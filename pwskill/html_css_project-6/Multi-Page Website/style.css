@@ -65,6 +65,14 @@
     border: none;
     margin-top:10vh ;
 }
+.main-left img[alt="bottom-mouse"]{
+    float: right;
+    /* margin-bottom: 50px; */
+   
+}
+
+
+
 .greenBox,
 .yellowBox {
   position: absolute;
@@ -88,3 +96,8 @@
     height: 90%;
     z-index: 2;
   }
+img[alt="bottom-mouse"]{
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+}
