@@ -39,6 +39,8 @@ nav{
 }
 img[alt="mainImage"]{
     position: relative;
+    top: -100px;
+    background: transparent;
 }
 img[alt="onEar"]{
     padding:0px 0px 20px 30px;
@@ -136,6 +138,7 @@ padding-left: 30px;
   }
 
   .buyNow{
+    margin-top: 10vh;
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
@@ -231,6 +234,7 @@ background: transparent;
 }
 
 footer{
+  margin: 10vh 0 5vh 0;
     display: flex;
     justify-content: space-between;
     align-items:start;

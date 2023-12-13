@@ -261,7 +261,7 @@ form {
 footer{
     display: flex;
     justify-content: space-between;
-    padding: 74.05px 74.05px 0px 74.05px;
+    padding: 0px 74.05px 0px 74.05px;
     align-items: center;
 }
 
