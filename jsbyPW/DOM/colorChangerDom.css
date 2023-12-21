@@ -1,0 +1,14 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#button{
+    padding: 10px;
+    border-style: none;
+    border-radius: 10px;
+    color: aliceblue;
+    background-color: grey;
+}
