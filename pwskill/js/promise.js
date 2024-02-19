@@ -58,6 +58,8 @@ async function getAllUsers(){
 getAllUsers()
 
 fetch('http://jsonplaceholder.typicode.com/users')
+
+
 .then (function(response){
     response.json()
 })
