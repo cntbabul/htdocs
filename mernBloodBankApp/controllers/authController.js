@@ -44,6 +44,7 @@ const loginController = async (req, res) => {
     
      // Find the user by email
     const user = await userModel.findOne({ email: req.body.email });
+ 
     
     if (!user) {
       return res.status(404).send({
@@ -59,15 +60,18 @@ const loginController = async (req, res) => {
       });
    }
     //compare password
-    const comparePassword = await compare(req.body.password, user.password);
-    //    if (!comparePassword) { const comparePassword = compare(
-    //   req.body.password,
-    //   user.password
-    // );
-    if (!comparePassword) {
+    const comparePassword = req.body.password;
+    // //    if (!comparePassword) { const comparePassword = compare(
+    // //   req.body.password,
+    // //   user.password
+    // // );
+    // console.log(user.password)
+    console.log(comparePassword)
+
+    if (comparePassword != user.password) {
       return res.status(401).send({
         success: false,
-        message: "Invalid Credentials",
+        message: "wrong password Passwords",
       });
     }
      
