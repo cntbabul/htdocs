@@ -53,6 +53,7 @@ const userSchema = new mongoose.Schema(
     phone: {
       type: String,
       required: [true, "phone numbe is required"],
+      unique:[true, "Phone number already registered"]
     },
   },
   { timestamps: true }
