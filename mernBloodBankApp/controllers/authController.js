@@ -43,13 +43,14 @@ const loginController = async (req, res) => {
   try {
     
      // Find the user by email
-    const user = await userModel.findOne({ email: req.body.email });
- console.log(user)
+    const user = await userModel.findOne({email:req.body.email });
+console.log(req.body.email)
+    console.log(user)
     
     if (!user) {
       return res.status(404).send({
         success: false,
-        message: "Invalid Credentials",
+        message: "Do not have an account",
       });
     }
     //check role
