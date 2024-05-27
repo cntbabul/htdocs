@@ -20,10 +20,10 @@ const inventorySchema = new mongoose.Schema({
     //     required: [true, "Donar Email is Required"],
     //   },
 
-    organization:{
+    organisation:{
         type: mongoose.Schema.Types.ObjectId,
-        ref:'users',
-        required:['true , organization is required']
+        ref:'users', // this is a reference to the users model
+        required: [true, 'organization is required'], // this required field will throw an error if the field is not provided when creating a new inventory record
     },
     hospital:{
         type:mongoose.Schema.Types.ObjectId,

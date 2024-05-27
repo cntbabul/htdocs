@@ -2,7 +2,7 @@ const express = require('express')
 const authMiddleWare = require("../middleWares/authMiddleWare");
 
 const {createInventoryController} = require("../controllers/inventoryController");
-// const { getInventoryController } = require("../controllers/inventoryController");
+const { getInventoryController } = require("../controllers/inventoryController");
 
 const router = express.Router()
 
@@ -10,7 +10,7 @@ const router = express.Router()
 router.post("/create-inventory", authMiddleWare  ,createInventoryController)
 
 // //GET ALL BLOOD RECORDS
-// router.get("/get-inventory", authMiddleWare, getInventoryController);
+router.get("/get-inventory", authMiddleWare, getInventoryController);
 
 // console.log(typeof createInventoryController);
 // console.log(typeof getInventoryController);

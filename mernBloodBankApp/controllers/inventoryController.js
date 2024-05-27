@@ -1,11 +1,12 @@
 const mongoose = require("mongoose");
+const userModel = require('../models/userModel');
 // this controller will handle the creation of inventory
 const inventoryModel = require("../models/inventoryModel");
 
 const createInventoryController =  async(req, res) => {
     try {
         const {email, inventoryType} = req.body
-        // console.log(email)
+        console.log(email)
         //validation
         const user = await userModel.findOne({email});
         if (!user) {
@@ -14,7 +15,7 @@ const createInventoryController =  async(req, res) => {
         if (inventoryType === "in" && user.role !=='donar' ){
             throw new Error('You are not logged in as a donar') 
         }
-        if (inventoryType ===out && user.role !== 'hospital'){
+        if (inventoryType ==="out" && user.role !== 'hospital'){
            throw new Error('You are not logged in as a hospital')
         }
 
@@ -38,7 +39,7 @@ const createInventoryController =  async(req, res) => {
     }
 }
 
-// GET ALL BLOOD RECORS
+// GET ALL BLOOD RECORDS
 const getInventoryController = async (req, res) => {
     try {
       const inventory = await inventoryModel
@@ -48,10 +49,11 @@ const getInventoryController = async (req, res) => {
         .populate("donar")
         .populate("hospital")
         .sort({ createdAt: -1 });
+        
       return res.status(200).send({
         success: true,
         messaage: "get all records successfully",
-        inventory,
+        inventory
       });
     } catch (error) {
       console.log(error);
@@ -66,4 +68,4 @@ const getInventoryController = async (req, res) => {
 
 
 
-module.exports = {createInventoryController}
+module.exports = {createInventoryController, getInventoryController}
