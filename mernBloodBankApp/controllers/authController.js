@@ -40,7 +40,7 @@ const loginController = async (req, res) => {
   try {
     // Find the user by email
     const user = await userModel.findOne({ email: req.body.email });
-    // console.log(req.body.email);
+    console.log(req.body.email);
     if (!user) {
       return res.status(404).send({
         success: false,
@@ -83,7 +83,6 @@ const loginController = async (req, res) => {
     });
   } catch (error) {
     console.log("Login Error", error);
-
     return res.status(500).send({
       success: false,
       message: "Login API Error",
