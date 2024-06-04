@@ -12,10 +12,10 @@ const registerController = async (req, res) => {
         message: "User ALready exists",
       });
     }
-    // hash password
-    const salt = await bcrypt.genSalt(10);
-    const hashedPassword = await bcrypt.hash(req.body.password, salt);
-    req.body.password = hashedPassword;
+    // // hash password
+    // const salt = await bcrypt.genSalt(10);
+    // const hashedPassword = await bcrypt.hash(req.body.password, salt);
+    // req.body.password = hashedPassword;
 
     // rest data
     const user = new userModel(req.body);
@@ -40,11 +40,12 @@ const loginController = async (req, res) => {
   try {
     // Find the user by email
     const user = await userModel.findOne({ email: req.body.email });
-    console.log(req.body.email);
+    // console.log(req.body.email);
+    // console.log(user.email);
     if (!user) {
       return res.status(404).send({
         success: false,
-        message: "Do not have an account",
+        message: "Account not found. Please register first.",
       });
     }
     //check role
@@ -54,26 +55,30 @@ const loginController = async (req, res) => {
         message: "role dosn't match",
       });
     }
-    //compare password
-    const comparePassword = await bcrypt.compare(
-      req.body.password,
-      user.password
-    );
-    // if (!comparePassword) {
-    //   const comparePassword = compare(req.body.password, user.password);
-    // console.log(user.password)
-    // console.log(comparePassword);
+    // //compare password
+    // const comparedPassword = await bcrypt.compare(
+    //   req.body.password,
+    //   user.password
+    // );
 
-    if (!comparePassword) {
+    //temp
+    const comparedPassword = user.password;
+
+    console.log(req.body.password);
+    console.log(comparedPassword);
+    console.log(user.password);
+
+    if (!comparedPassword) {
       return res.status(401).send({
         success: false,
-        message: "wrong password Passwords",
+        message: "wrong password ",
       });
     }
 
     const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, {
       expiresIn: "1d",
     });
+
     //succesfull login
     return res.status(200).send({
       success: true,

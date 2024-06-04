@@ -18,7 +18,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
     <div>
       <form
         onSubmit={(e) => {
-          if (formType === "login)")
+          if (formType === "login")
             return handleLogin(e, email, password, role);
           else if (formType === "register")
             return handleRegister(
@@ -68,7 +68,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
             </label>
           </div>
 
-          <div className="form-check ms-1">
+          <div className="form-check ms-2">
             <input
               type="radio"
               className="form-check-input"
@@ -169,7 +169,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                   <InputType
                     labelText={"Password"}
                     labelFor={"forPassword"}
-                    inputType={"Password"}
+                    inputType={"password"}
                     name={"password"}
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
