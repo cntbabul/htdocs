@@ -11,24 +11,27 @@ const createInventoryController = async (req, res) => {
     if (!user) {
       throw new Error("User Not Found");
     }
-    // if (inventoryType === "in" && user.role !== "donar") {
-    //   throw new Error("Not a donar account");
-    // }
-    // if (inventoryType === "out" && user.role !== "hospital") {
-    //   throw new Error("Not a hospital");
-    // }
-
-    if (req.body.inventoryType == "out") {
-      const requestedBloodGroup = req.body.bloodGroup;
-      const requestedQuantityOfBlood = req.body.quantity;
-      const organisation = new mongoose.Types.ObjectId(req.body.userId);
-      //calculate Blood Quanitity
+    if (inventoryType === "in" && user.role !== "donar") {
+      throw new Error("Not a donar account");
+    }
+    if (inventoryType === "out" && user.role !== "hospital") {
+      throw new Error("Not a hospital");
+    }
+    // Extract the necessary data from the request body
+    const { inventoryType, bloodGroup, quantity, userId } = req.body;
+    // Convert the userId to a MongoDB ObjectId
+    const organisation = new mongoose.Types.ObjectId(userId);
+    // Check if the inventoryType is "out"
+    if (inventoryType === "out") {
+      // Calculate the total quantity of blood of the requested blood group
+      const requestedQuantityOfBlood = quantity;
+      // Calculate the total quantity of blood of the requested blood group in "in" inventory items
       const totalInOfRequestedBlood = await inventoryModel.aggregate([
         {
           $match: {
             organisation,
             inventoryType: "in",
-            bloodGroup: requestedBloodGroup,
+            bloodGroup,
           },
         },
         {
@@ -38,7 +41,6 @@ const createInventoryController = async (req, res) => {
           },
         },
       ]);
-      // console.log("Total In", totalInOfRequestedBlood);
       const totalIn = totalInOfRequestedBlood[0]?.total || 0;
       //calculate OUT Blood Quanitity
 
@@ -114,7 +116,8 @@ const getInventoryController = async (req, res) => {
     });
   }
 };
-// GET Hospital BLOOD RECORS
+// GET Hospital BLOOD RECORDS
+
 const getInventoryHospitalController = async (req, res) => {
   try {
     const inventory = await inventoryModel
@@ -125,11 +128,13 @@ const getInventoryHospitalController = async (req, res) => {
       .sort({ createdAt: -1 });
     return res.status(200).send({
       success: true,
-      messaage: "get hospital comsumer records successfully",
+      messaage: "get hospital consumer records successfully",
       inventory,
     });
   } catch (error) {
     console.log(error);
+    // If there is an error, return a response object with the error status,
+    // an error message, and the error itself.
     return res.status(500).send({
       success: false,
       message: "Error In Get consumer Inventory",
@@ -170,7 +175,7 @@ const getDonarsController = async (req, res) => {
     const donorId = await inventoryModel.distinct("donar", {
       organisation,
     });
-    // console.log(donorId);
+    //console.log(donorId);
     const donars = await userModel.find({ _id: { $in: donorId } });
 
     return res.status(200).send({
@@ -251,6 +256,7 @@ const getOrgnaisationForHospitalController = async (req, res) => {
       message: "Hospital Org Data Fetched Successfully",
       organisations,
     });
+    console.log(organisations);
   } catch (error) {
     console.log(error);
     return res.status(500).send({

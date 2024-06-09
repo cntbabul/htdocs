@@ -12,10 +12,10 @@ const registerController = async (req, res) => {
         message: "User ALready exists",
       });
     }
-    // // hash password
-    // const salt = await bcrypt.genSalt(10);
-    // const hashedPassword = await bcrypt.hash(req.body.password, salt);
-    // req.body.password = hashedPassword;
+    // hash password
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(req.body.password, salt);
+    req.body.password = hashedPassword;
 
     // rest data
     const user = new userModel(req.body);
@@ -61,7 +61,7 @@ const loginController = async (req, res) => {
     //   user.password
     // );
 
-    //temp
+    // //temp
     const comparedPassword = user.password;
 
     console.log(req.body.password);

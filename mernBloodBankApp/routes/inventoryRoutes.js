@@ -1,19 +1,53 @@
-const express = require('express')
-const authMiddleWare = require("../middleWares/authMiddleWare");
+const express = require("express");
+const authMiddelware = require("../middleWares/authMiddleWare");
+const {
+  createInventoryController,
+  getInventoryController,
+  getDonarsController,
+  getHospitalController,
+  getOrgnaisationController,
+  getOrgnaisationForHospitalController,
+  getInventoryHospitalController,
+  getRecentInventoryController,
+} = require("../controllers/inventoryController");
 
-const {createInventoryController} = require("../controllers/inventoryController");
-const { getInventoryController } = require("../controllers/inventoryController");
-
-const router = express.Router()
+const router = express.Router();
 
 //routes
-router.post("/create-inventory", authMiddleWare  ,createInventoryController)
+// ADD INVENTORY || POST
+router.post("/create-inventory", authMiddelware, createInventoryController);
 
-// //GET ALL BLOOD RECORDS
-router.get("/get-inventory", authMiddleWare, getInventoryController);
+//GET ALL BLOOD RECORDS
+router.get("/get-inventory", authMiddelware, getInventoryController);
 
-// console.log(typeof createInventoryController);
-// console.log(typeof getInventoryController);
+//GET RECENT BLOOD RECORDS
+router.get(
+  "/get-recent-inventory",
+  authMiddelware,
+  getRecentInventoryController
+);
 
+//GET HOSPITAL BLOOD RECORDS
+router.post(
+  "/get-inventory-hospital",
+  authMiddelware,
+  getInventoryHospitalController
+);
+
+//GET DONAR RECORDS
+router.get("/get-donars", authMiddelware, getDonarsController);
+
+//GET HOSPITAL RECORDS
+router.get("/get-hospitals", authMiddelware, getHospitalController);
+
+//GET orgnaisation RECORDS
+router.get("/get-orgnaisation", authMiddelware, getOrgnaisationController);
+
+//GET orgnaisation RECORDS
+router.get(
+  "/get-orgnaisation-for-hospital",
+  authMiddelware,
+  getOrgnaisationForHospitalController
+);
 
 module.exports = router;

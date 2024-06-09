@@ -53,7 +53,7 @@ const userSchema = new mongoose.Schema(
     phone: {
       type: String,
       required: [true, "phone numbe is required"],
-      unique:[true, "Phone number already registered"]
+      unique: [true, "Phone number already registered"],
     },
   },
   { timestamps: true }
@@ -61,13 +61,8 @@ const userSchema = new mongoose.Schema(
 
 module.exports = mongoose.model("users", userSchema);
 
-
-
-
-
-
 // Create a User model based on the schema
-const User = mongoose.model('User', userSchema);
+const User = mongoose.model("User", userSchema);
 
 // Export the User model to use in other parts of the application
 module.exports = User;

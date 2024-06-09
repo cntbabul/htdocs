@@ -9,6 +9,7 @@ const Modal = () => {
   const [quantity, setQuantity] = useState(0);
   const [email, setEmail] = useState("");
   const { user } = useSelector((state) => state.auth);
+
   // handle modal data
   const handleModalSubmit = async () => {
     try {
@@ -63,6 +64,7 @@ const Modal = () => {
               <div className="d-flex mb-3">
                 Blood Type: &nbsp;
                 <div className="form-check ms-3">
+                  {/*Radio Button of blood in or out =======||=========*/}
                   <input
                     type="radio"
                     name="inRadio"
@@ -88,6 +90,8 @@ const Modal = () => {
                   </label>
                 </div>
               </div>
+
+              {/* blood group  ============ ====================*/}
               <select
                 className="form-select"
                 aria-label="Default select example"
@@ -105,6 +109,7 @@ const Modal = () => {
                 <option value={"B+"}>B+</option>
                 <option value={"B-"}>B-</option>
               </select>
+
               <InputType
                 labelText={"Donar Email"}
                 labelFor={"donarEmail"}
@@ -112,6 +117,8 @@ const Modal = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
+
+              {/* Blood Amount    ================   ================   */}
               <InputType
                 labelText={"Quanitity (ML)"}
                 labelFor={"quantity"}
@@ -120,6 +127,8 @@ const Modal = () => {
                 onChange={(e) => setQuantity(e.target.value)}
               />
             </div>
+
+            {/* close & Submit Button ================ ================ */}
             <div className="modal-footer">
               <button
                 type="button"
@@ -128,6 +137,7 @@ const Modal = () => {
               >
                 Close
               </button>
+
               <button
                 type="button"
                 className="btn btn-primary"

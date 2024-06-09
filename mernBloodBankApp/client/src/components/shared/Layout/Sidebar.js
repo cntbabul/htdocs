@@ -1,5 +1,5 @@
 import React from "react";
-import { userMenu } from "./Menus/userMenu";
+//import { userMenu } from "./Menus/userMenu";
 import { useLocation, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "../../../styles/Layout.css";
@@ -99,7 +99,7 @@ const Sidebar = () => {
             </div>
           )}
 
-          {userMenu.map((menu) => {
+          {/* {userMenu.map((menu) => {
             const isActive = location.pathname === menu.path;
             return (
               <div
@@ -110,7 +110,7 @@ const Sidebar = () => {
                 <Link to={menu.path}>{menu.name}</Link>
               </div>
             );
-          })}
+          })} */}
         </div>
       </div>
     </div>
