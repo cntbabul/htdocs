@@ -1,0 +1,41 @@
+.home-container{
+    font-size: 55px;
+    height: 300px;
+    color: #c8d5df;
+    background-color: black;
+  
+}
+
+.home-content h2{
+    padding: 10px;
+    padding-top: 80px;
+    /* margin-left: -90px; */
+}
+
+.home-content h1{
+color: #ff8800;
+    padding: 20px 20px 20px 20px;
+}
+
+.btn-hire{
+    color: #ffffff;
+    background-color: #f38e00c4;
+    border: none;
+    margin: 10px;
+    width: 160px;
+}
+.btn-resume{
+    color:  #ffffff;
+    background-color: #00f300c4;
+    border: none;
+    margin: 10px;
+    width: 160px;
+}
+.btn:hover{
+    background-color: #fff;
+    color: #0a66c2;
+    width: 180px;
+    border: none;
+}
+
+
