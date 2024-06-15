@@ -1,7 +1,7 @@
 import React from "react";
 import "./Techstack.css";
 import { TechstackList } from "../../utils/TechstackList";
-
+import { Fade } from "react-reveal";
 const Teckstack = () => {
   return (
     <>
@@ -13,24 +13,26 @@ const Teckstack = () => {
         </p>
 
         <div className="row">
-          {TechstackList.map((tech) => (
-            <div key={tech._id} className="col-md-3">
-              <div className="card m-2">
-                <div className="card-content">
-                  <div className="card-body">
-                    <div className="media d-flex justify-content-center">
-                      <div className="align-self-center">
-                        <tech.icon className="tech-icon" />
-                      </div>
-                      <div className="media-body">
-                        <h5>{tech.name}</h5>
+          <Fade right>
+            {TechstackList.map((tech) => (
+              <div key={tech._id} className="col-md-3">
+                <div className="card m-2">
+                  <div className="card-content">
+                    <div className="card-body">
+                      <div className="media d-flex justify-content-center">
+                        <div className="align-self-center">
+                          <tech.icon className="tech-icon" />
+                        </div>
+                        <div className="media-body">
+                          <h5>{tech.name}</h5>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </Fade>
         </div>
       </div>
     </>

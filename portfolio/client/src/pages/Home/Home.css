@@ -1,18 +1,25 @@
 .home-container{
     font-size: 55px;
-    height: 300px;
+    height: 310px;
     color: #c8d5df;
-    background-color: black;
-  
+    background-color: black; 
+    
 }
 
-.home-content h2{
+.home-buttons{
+   padding-bottom: 30px;
+
+   /* display: flex; */
+   /* justify-content: center; */
+}
+
+ h2{
     padding: 10px;
     padding-top: 80px;
     /* margin-left: -90px; */
 }
 
-.home-content h1{
+ h1{
 color: #ff8800;
     padding: 20px 20px 20px 20px;
 }
@@ -38,4 +45,23 @@ color: #ff8800;
     border: none;
 }
 
+
+.theme-btn{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    height: 75px;
+    width: 75px;
+    border-radius:  50% 10px 10px 50%;
+    background-color: #0a66c2;
+    color: #fff;
+    border: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin: 20px;
+    cursor: pointer;
+    z-index: 1;
+   
+}
 

@@ -1,5 +1,9 @@
-.projects{
-
+.projects>p{
+    padding-bottom: 10px;
+   
+}
+.card{
+    margin-top:10px;
 }
 
 .card-notify-badge {
@@ -12,6 +16,7 @@
     color: white;
     padding: 5px 10px;
     font-size: 14px;
+   
 }
 
 .card-detail-badge {
@@ -24,6 +29,7 @@ font-size: 14px;
 margin-top: 10px;
 display: inline-block;
 margin-left: 5px;
+
 
 }
 
@@ -60,4 +66,9 @@ margin-left: 5px;
     border:#008000 solid 2px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
    
+}
+
+#dark .card{
+    background-color: rgba(25, 23, 23, 0.799);
+    color: #ffffff;
 }

@@ -1,0 +1,20 @@
+hr{
+    border: 10px solid green; 
+     border-radius: 5px;
+
+  
+    /* border: none;
+    height: 10px;
+    background: linear-gradient(-135deg, #fff 5px, transparent 0) 0 30px, linear-gradient(135deg, #fff 5px, green 0) 0 30px;
+    background-color: #fff;
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    background-size: 10px 10px; */
+    
+    
+}
+.work{
+    background-color: #0a66c242;
+    border-radius: 10px;
+    margin-top: 7%;
+}

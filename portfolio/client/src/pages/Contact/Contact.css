@@ -1,0 +1,56 @@
+.contact{
+    margin-top: 7%;
+}
+
+
+.card0{
+    margin-bottom: 10%;
+}
+/* .card2 h6{
+    margin: 0px;
+    padding: -10px important;
+    width: 200px;
+} */
+
+.line{
+    height: 1px;
+    width: 45%;
+    background-color: #0a66c2;;
+}
+
+#row-or {
+    display: flex;
+    flex-direction: column;}
+
+
+.or{
+    display: inline;
+}
+
+.card>.row{
+    padding: 3.5%;
+    /* margin: 3.5%; */
+    background-color:rgba(0, 170, 255, 0.168);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: #f5ca7a 1px solid; */   
+}
+
+#dark .card>.row{
+    background-color: rgba(6, 5, 5, 0.854);
+}
+
+
+
+
+/* .row{
+    border: #0a66c2 1px solid;
+} */
+
+/* .left-img{
+   /* display: flex; */
+   /* justify-content: center; */
+   /* align-items: center; */
+   /* flex-direction: column; */
