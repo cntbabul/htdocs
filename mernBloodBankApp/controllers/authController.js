@@ -55,23 +55,23 @@ const loginController = async (req, res) => {
         message: "role dosn't match",
       });
     }
-    // //compare password
-    // const comparedPassword = await bcrypt.compare(
-    //   req.body.password,
-    //   user.password
-    // );
+    //compare password
+    const comparePassword = await bcrypt.compare(
+      req.body.password,
+      user.password
+    );
 
-    // //temp
-    const comparedPassword = user.password;
+    // // //temp
+    // const comparedPassword = user.password;
 
-    console.log(req.body.password);
-    console.log(comparedPassword);
-    console.log(user.password);
+    // console.log(req.body.password);
+    // console.log(comparedPassword);
+    // console.log(user.password);
 
-    if (!comparedPassword) {
+    if (!comparePassword) {
       return res.status(401).send({
         success: false,
-        message: "wrong password ",
+        message: "Wrong Credential",
       });
     }
 

@@ -12,7 +12,7 @@ const Register = () => {
       {loading ? (
         <Spinner />
       ) : (
-        <div className="row g-0">
+        <div className="row ">
           <div className="col-md-8 form-banner ">
             <img src={banner} alt="registerImage" />
           </div>

@@ -1,11 +1,36 @@
 import React, { useState } from "react";
 import "./Contact.css";
 import { BsFacebook, BsGithub, BsLinkedin, BsInstagram } from "react-icons/bs";
+import axios from "axios";
 
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [msg, setMsg] = useState("");
+  const nam = "";
+
+  //handle submit button
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (!name || !email || !msg || !nam) {
+        alert("Please Contact on Whataspp😞");
+      }
+
+      const res = await axios.post("/api/v1/portfolio/sendEmail", {
+        email,
+        name,
+        msg,
+      });
+      if (res.data.success) {
+        alert("Please Contact on Whataspp😞");
+      } else {
+        alert(res.data.message);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <>
@@ -67,7 +92,7 @@ const Contact = () => {
                   <textarea
                     type="text"
                     name="msg"
-                    placeholder="Send me something Cool 😎"
+                    placeholder="Not working Currently!! Please Contact on Whataspp😞 by ckicking Below button."
                     className="mb-3"
                     value={msg}
                     onChange={(e) => setMsg(e.target.value)}
@@ -75,7 +100,9 @@ const Contact = () => {
                 </div>
 
                 <div className="row px-3">
-                  <button className="btn ad-btn">Send Message</button>
+                  <button className="btn ad-btn" onClick={handleSubmit}>
+                    Send Message
+                  </button>
                 </div>
               </div>
             </div>

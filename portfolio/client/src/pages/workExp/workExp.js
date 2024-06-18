@@ -10,8 +10,8 @@ import "react-vertical-timeline-component/style.min.css";
 const WorkExp = () => {
   return (
     <>
-      <div className="work">
-        <div className="container work-exp">
+      <div className="work container ">
+        <div className=" work-exp">
           <h1 className="col-12 mt-3 mb-1 text-center">WORK EXPERIENCE</h1>
           <hr />
           <p className="pb-3 text-center">

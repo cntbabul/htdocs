@@ -1,5 +1,6 @@
 import "./App.css";
 import Layout from "./components/Layout/Layout";
+import MobileNav from "./components/MobileNav/MobileNav";
 import { useTheme } from "./context/ThemeContext";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
@@ -9,12 +10,15 @@ import Teckstack from "./pages/Techstack/Teckstack";
 import WorkExp from "./pages/workExp/workExp";
 import ScrollToTop from "react-scroll-to-top";
 // import { useTheme } from "./context/ThemeContext";
+import WhatsApp from "./pages/whatsappMe/whatsApp";
 
 function App() {
   const [theme] = useTheme();
   return (
     <>
       <div id={theme}>
+        <MobileNav />
+
         <Layout />
 
         <div className="container">
@@ -24,6 +28,7 @@ function App() {
           <Education />
           <About />
           <Contact />
+          <WhatsApp />
         </div>
 
         <div className="footer">

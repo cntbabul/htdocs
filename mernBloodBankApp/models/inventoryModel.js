@@ -23,8 +23,8 @@ const inventorySchema = new mongoose.Schema(
 
     organisation: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "users", // this is a reference to the users model
-      required: [true, "organization is required"], // this required field will throw an error if the field is not provided when creating a new inventory record
+      ref: "users",
+      required: [true, "organization is required"],
     },
     hospital: {
       type: mongoose.Schema.Types.ObjectId,
@@ -34,7 +34,7 @@ const inventorySchema = new mongoose.Schema(
       },
     },
     donar: {
-      type: mongoose.Schema.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: "users",
       required: function () {
         return this.inventoryType === "in";
@@ -44,4 +44,4 @@ const inventorySchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("inventory", inventorySchema);
+module.exports = mongoose.model("Inventory", inventorySchema);

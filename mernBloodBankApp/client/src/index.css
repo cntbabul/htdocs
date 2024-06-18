@@ -5,7 +5,9 @@
     /* overflow: hidden; */
 
 }
-
+.row{
+  width: 100vw;
+}
 /* ===========
 ==== FORM
 =========== */

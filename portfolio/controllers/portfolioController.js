@@ -24,19 +24,19 @@ const sendEmailController = (req, res) => {
       });
     }
     //email matter
-    transporter.sendMail({
-      to: "emailatbabul@gmail.com",
-      from: "emailatbabul@gmail.com",
-      subject: "Regarding Mern Portfolio App",
-      html: `
-        <h5>Detail Information</h5>
-        <ul>
-          <li><p>Name : ${name}</p></li>
-          <li><p>Email : ${email}</p></li>
-          <li><p>Message : ${msg}</p></li>
-        </ul>
-      `,
-    });
+    // transporter.sendMail({
+    //   to: "emailatbabul@gmail.com",
+    //   from: "emailatbabul@gmail.com",
+    //   subject: "Regarding Mern Portfolio App",
+    //   html: `
+    //     <h5>Detail Information</h5>
+    //     <ul>
+    //       <li><p>Name : ${name}</p></li>
+    //       <li><p>Email : ${email}</p></li>
+    //       <li><p>Message : ${msg}</p></li>
+    //     </ul>
+    //   `,
+    // });
 
     return res.status(200).send({
       success: true,

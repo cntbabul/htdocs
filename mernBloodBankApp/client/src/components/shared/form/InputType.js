@@ -1,6 +1,7 @@
 import React from "react";
 
 const InputType = ({
+  placeholder,
   labelText,
   labelFor,
   inputType,
@@ -17,6 +18,7 @@ const InputType = ({
         type={inputType}
         className="form-control"
         name={name}
+        placeholder={placeholder}
         value={value}
         onChange={onChange}
       />

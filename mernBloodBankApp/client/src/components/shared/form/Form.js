@@ -109,6 +109,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                     labelFor={"forEmail"}
                     inputType={"email"}
                     name={"email"}
+                    placeholder={"Enter email Here"}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                   />
@@ -117,6 +118,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                     labelFor={"forPassword"}
                     inputType={"Password"}
                     name={"password"}
+                    placeholder={"Enter Password Here"}
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                   />
@@ -131,6 +133,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                       labelText={"Name"}
                       labelFor={"forName"}
                       inputType={"text"}
+                      placeholder={"Enter Donar Name Here"}
                       name={"name"}
                       value={name}
                       onChange={(e) => setName(e.target.value)}
@@ -143,6 +146,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                       labelFor={"forOrganisationName"}
                       inputType={"text"}
                       name={"organisationName"}
+                      placeholder={"Enter Organisation Name Here"}
                       value={organisationName}
                       onChange={(e) => setOrganisationName(e.target.value)}
                     />
@@ -153,6 +157,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                       labelFor={"forHospitalName"}
                       inputType={"text"}
                       name={"hospitalName"}
+                      placeholder={"Enter Hospital Name Here"}
                       value={hospitalName}
                       onChange={(e) => setHospitalName(e.target.value)}
                     />
@@ -163,6 +168,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                     labelFor={"forEmail"}
                     inputType={"email"}
                     name={"email"}
+                    placeholder={"Enter Email Here"}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                   />
@@ -171,6 +177,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                     labelFor={"forPassword"}
                     inputType={"password"}
                     name={"password"}
+                    placeholder={"Enter Password Here"}
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                   />
@@ -180,6 +187,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                     labelFor={"forWebsite"}
                     inputType={"text"}
                     name={"website"}
+                    placeholder={"Enter Website Here"}
                     value={website}
                     onChange={(e) => setWebsite(e.target.value)}
                   />
@@ -188,6 +196,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                     labelFor={"forAddress"}
                     inputType={"text"}
                     name={"address"}
+                    placeholder={"Enter Address Here"}
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}
                   />
@@ -196,6 +205,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                     labelFor={"forPhone"}
                     inputType={"text"}
                     name={"phone"}
+                    placeholder={"Enter Mobile Number Here"}
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                   />
