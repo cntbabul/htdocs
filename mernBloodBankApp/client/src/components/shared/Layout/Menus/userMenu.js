@@ -1,3 +1,4 @@
+// import { HiMiniUserGroup } from "react-icons/hi2";
 export const userMenu = [
   {
     name: "Inventory",
@@ -18,5 +19,6 @@ export const userMenu = [
     name: "Orgnaisation",
     path: "/orgnaisation",
     icon: "fa-sharp fa-solid fa-building-ngo",
+    // icon: HiMiniUserGroup,
   },
 ];

@@ -36,7 +36,7 @@ const Consumer = () => {
           <thead>
             <tr>
               <th scope="col">Blood Group</th>
-              <th scope="col">Inventory TYpe</th>
+              <th scope="col">Inventory Type</th>
               <th scope="col">Quantity</th>
               <th scope="col">Email</th>
               <th scope="col">Date</th>

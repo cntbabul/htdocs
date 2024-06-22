@@ -9,7 +9,7 @@ const Hospitals = () => {
   const getDonars = async () => {
     try {
       const { data } = await API.get("/inventory/get-hospitals");
-      console.log(data);
+      // console.log(data);
       if (data?.success) {
         setData(data?.hospitals);
       }

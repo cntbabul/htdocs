@@ -4,6 +4,15 @@ const jwt = require("jsonwebtoken");
 
 const registerController = async (req, res) => {
   try {
+    // console.log(req.body.e);
+    // console.log(req.body.role);
+    // console.log(req.body.name);
+    // console.log(req.body.email);
+    // console.log(req.body.password);
+    // console.log(req.body.website);
+    // console.log(req.body.address);
+    // console.log(req.body.phone);
+
     const exisitingUser = await userModel.findOne({ email: req.body.email });
     // validation
     if (exisitingUser) {
@@ -61,13 +70,6 @@ const loginController = async (req, res) => {
       user.password
     );
 
-    // // //temp
-    // const comparedPassword = user.password;
-
-    // console.log(req.body.password);
-    // console.log(comparedPassword);
-    // console.log(user.password);
-
     if (!comparePassword) {
       return res.status(401).send({
         success: false,
@@ -78,7 +80,7 @@ const loginController = async (req, res) => {
     const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, {
       expiresIn: "1d",
     });
-
+    console.log(token);
     //succesfull login
     return res.status(200).send({
       success: true,

@@ -2,8 +2,10 @@ const JWT = require("jsonwebtoken");
 
 module.exports = async (req, res, next) => {
   try {
+    // const authHeader = req.headers["Authorization"];
+    // const token = authHeader.split(" ")[1];
     const token = req.headers["authorization"].split(" ")[1];
-    // console.log(`token ${token}`);
+    // console.log(`token ${token}`); //display token in console
     if (!token) {
       return res.status(401).send({
         success: false,

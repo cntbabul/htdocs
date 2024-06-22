@@ -1,5 +1,5 @@
 import React from "react";
-//import { userMenu } from "./Menus/userMenu";
+// import { userMenu } from "./Menus/userMenu";
 import { useLocation, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "../../../styles/Layout.css";
@@ -22,6 +22,7 @@ const Sidebar = () => {
                 <i className="fa-solid fa-warehouse"></i>
                 <Link to="/">Inventory</Link>
               </div>
+
               <div
                 className={`menu-item ${
                   location.pathname === "/donar" && "active"
@@ -99,7 +100,9 @@ const Sidebar = () => {
             </div>
           )}
 
-          {/* {userMenu.map((menu) => {
+          {
+            // usermenu added conditionally
+            /* {userMenu.map((menu) => {
             const isActive = location.pathname === menu.path;
             return (
               <div
@@ -110,7 +113,8 @@ const Sidebar = () => {
                 <Link to={menu.path}>{menu.name}</Link>
               </div>
             );
-          })} */}
+          })} */
+          }
         </div>
       </div>
     </div>

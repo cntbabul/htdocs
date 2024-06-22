@@ -44,8 +44,8 @@ export const handleRegister = (
     );
     store.dispatch(
       userRegister({
-        name,
         role,
+        name,
         email,
         password,
         phone,

@@ -15,6 +15,7 @@ const ProtectedRoute = ({ children }) => {
       }
     } catch (error) {
       localStorage.clear();
+      alert("token not found please login first");
       console.log(error);
     }
   };

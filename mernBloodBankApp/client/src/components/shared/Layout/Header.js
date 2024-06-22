@@ -1,5 +1,6 @@
 import React from "react";
-import { BiDonateBlood, BiUserCircle } from "react-icons/bi";
+import { BiUserCircle } from "react-icons/bi";
+import { RiContrastDrop2Fill } from "react-icons/ri";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 const Header = () => {
@@ -18,12 +19,12 @@ const Header = () => {
       <nav className="navbar">
         <div className="container-fluid ">
           <div className="navbar-brand h1 ">
-            <BiDonateBlood color="red" /> Blood Bank App
+            <RiContrastDrop2Fill color="red" size={40} /> Blood Bank App
           </div>
           <ul className="navbar-nav flex-row">
             <li className="nav-item mx-3">
               <p className="nav-link">
-                <BiUserCircle /> Welcome{" "}
+                <BiUserCircle color="green" size={30} /> Welcome{" "}
                 {user?.name || user?.hospitalName || user?.organisationName}
                 &nbsp;
                 <span className="badge bg-secondary">{user?.role}</span>
