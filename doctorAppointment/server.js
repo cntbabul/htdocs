@@ -1,35 +1,31 @@
 const express = require("express");
 const colors = require("colors");
-const morgan = require("morgan");
+const moragan = require("morgan");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 
-//dotenv config
+//dotenv conig
 dotenv.config();
 
-//mongodb conn
-
+//mongodb connection
 connectDB();
 
-//rest object
+//rest obejct
 const app = express();
 
 //middlewares
 app.use(express.json());
-app.use(morgan("dev"));
+app.use(moragan("dev"));
 
 //routes
-app.get("/", (req, res) => {
-  res.status(200).send({
-    message: "Welcome to Doctor Appointment API",
-  });
-});
+app.use("/api/v1/user", require("./routes/userRoutes"));
 
 //port
-const PORT = process.env.PORT || 5000;
+const port = 8080; // process.env.PORT
 //listen port
-app.listen(PORT, () => {
+app.listen(port, () => {
   console.log(
-    `Server running in ${process.env.NODE_MODE} mode on port ${PORT}`.red.bold
+    `Server Running in ${process.env.NODE_MODE} Mode on port ${port}`.bgCyan
+      .white
   );
 });
