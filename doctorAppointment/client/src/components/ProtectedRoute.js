@@ -10,6 +10,7 @@ export default function ProtectedRoute({ children }) {
   const { user } = useSelector((state) => state.user);
 
   //get User
+  //eslint-disable-next-line
   const getUser = async () => {
     try {
       dispatch(showLoading());
@@ -28,8 +29,11 @@ export default function ProtectedRoute({ children }) {
       } else {
         localStorage.removeItem("token");
         <Navigate to="/login" />;
+        localStorage.removeItem("token");
       }
     } catch (error) {
+      dispatch(hideLoading());
+      localStorage.removeItem("token");
       console.log(error);
     }
   };
@@ -38,7 +42,7 @@ export default function ProtectedRoute({ children }) {
     if (!user) {
       getUser();
     }
-  }, [user]);
+  }, [user, getUser]);
 
   if (localStorage.getItem("token")) {
     return children;
