@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ul>
+
+    <script>
+        //append child
+        let title = document.createElement("h1")
+        title.className = "appendh1";
+        title.style.fontSize = "50px";
+        title.textContent = "Append Child h1 with javascript"
+        document.body.appendChild(title)
+
+        //remove child
+        let ul = document.querySelector("ul");
+        let lists = document.querySelectorAll("li");
+
+        for (list of lists) {
+            ul.removeChild(list);
+        }
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

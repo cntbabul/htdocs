@@ -1,0 +1,14 @@
+.whatsapp>.btn{
+    width: 30%;
+    margin-bottom: 30px;
+}
+
+.education>h1{
+    padding-top: 30px;
+}
+@media screen and (max-width: 600px) {
+    .whatsapp>.btn{
+        width: 75%;
+        margin-bottom: 30px;
+    }
+}

@@ -1,0 +1,75 @@
+.projects>p{
+    padding-bottom: 10px;
+   
+}
+.card{
+    padding-top: 10px;
+    margin-top:30px;
+}
+
+.card-notify-badge {
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    background: #ff8800;
+    text-align: center;
+    border-radius: 30px 30px 30px 30px;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+   
+}
+
+.card-detail-badge {
+background-color:  #ff8800;
+text-align: center;
+border-radius: 7px;
+color: #ffffff;
+padding: 5px 10px;
+font-size: 14px;
+margin-top: 10px;
+display: inline-block;
+margin-left: 5px;
+
+
+}
+
+.ad-title h5{
+    font-size: 20px;
+}
+
+
+
+.ad-btn{
+    display: block;
+    text-align: center;
+    background-color:  #008000;
+    width: 200px;
+    /* height: 15px; */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 45px;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.card:hover{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+
+.ad-btn:hover{  
+      background-color:#7aeb7ad9;
+    color: #000000;
+    border:#008000 solid 2px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+   
+}
+
+#dark .card{
+    background-color: rgba(25, 23, 23, 0.799);
+    color: #ffffff;
+}
