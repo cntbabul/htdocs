@@ -153,10 +153,33 @@ const getAllNotificationController = async (req, res) => {
   }
 };
 
+//mark all notification as read
+const deleteAllNotificationController = async (req, res) => {
+  try {
+    const user = await userModel.findOne({ _id: req.body.userId });
+    user.notification = [];
+    user.seennotification = [];
+    const updatedUser = await user.save();
+    res.status(200).send({
+      success: true,
+      message: "All Notification deleted as read",
+      data: updatedUser,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).send({
+      success: false,
+      message: "Error in geteAllNotification controller",
+      error,
+    });
+  }
+};
+
 module.exports = {
   loginController,
   registerController,
   authController,
   applyDoctorController,
   getAllNotificationController,
+  deleteAllNotificationController,
 };
