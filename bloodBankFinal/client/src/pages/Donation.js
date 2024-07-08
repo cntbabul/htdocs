@@ -27,6 +27,7 @@ const Donation = () => {
 
   useEffect(() => {
     getDonars();
+    // eslint-disable-next-line
   }, []);
 
   return (

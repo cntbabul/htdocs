@@ -34,6 +34,7 @@ const OrganisationPage = () => {
 
   useEffect(() => {
     getOrg();
+    // eslint-disable-next-line
   }, [user]);
 
   return (

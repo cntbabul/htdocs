@@ -27,6 +27,7 @@ const Consumer = () => {
 
   useEffect(() => {
     getDonars();
+    // eslint-disable-next-line
   }, []);
 
   return (
