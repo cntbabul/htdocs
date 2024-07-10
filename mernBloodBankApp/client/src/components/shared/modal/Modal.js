@@ -108,7 +108,7 @@ const Modal = () => {
                 <option value={"AB-"}>AB-</option>
               </select>
               <InputType
-                labelText={"Donar Email"}
+                labelText={"Email"}
                 labelFor={"donarEmail"}
                 inputType={"email"}
                 value={email}

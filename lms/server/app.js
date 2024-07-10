@@ -5,6 +5,7 @@ import { config } from "dotenv";
 import morgan from "morgan";
 import userRoutes from "./routes/user.routes.js";
 import errorMiddleware from "./middlewares/error.middleware.js";
+import courseRoutes from "./routes/course.routes.js";
 
 config();
 const app = express();
@@ -19,6 +20,8 @@ app.use(morgan("dev"));
 app.use(cors({ origin: [process.env.CLIENT_URL], credentials: true }));
 
 app.use("/api/v1/auth", userRoutes);
+// app.use("/api/v1/user", userRoutes);
+app.use("/api/v1/courses", courseRoutes);
 
 app.use("/ping", (req, res) => {
   res.status(200).json({ data: "ping back" });

@@ -2,7 +2,7 @@ import AppError from "../utils/error.util.js";
 import User from "../model/user.model.js";
 import fs from "fs/promises";
 import cloudinary from "cloudinary";
-import { send } from "process";
+// import { send } from "process";
 import sendEmail from "../utils/sendEmail.js";
 
 const cookieOptions = {
