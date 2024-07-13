@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 //get all blogs
 exports.getAllBlogs = async (req, res) => {
   try {
-    const blogs = await blogModel.find({});
+    const blogs = await blogModel.find({}).populate("user");
     if (!blogs) {
       return res.status(400).json({ success: false, message: "No blog found" });
     }
