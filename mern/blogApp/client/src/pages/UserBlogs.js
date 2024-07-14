@@ -18,6 +18,7 @@ const UserBlogs = () => {
         setBlogs(data.userBlogs.blogs);
       } else {
         console.log(`UserBlogs data not found`);
+        setBlogs([]); // Set blogs to an empty array if the data is not found
       }
     } catch (error) {
       console.log(error);

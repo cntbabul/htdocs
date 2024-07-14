@@ -57,7 +57,7 @@ export default function BlogCard({
         avatar={
           <Avatar sx={{ bgcolor: blue[500] }} aria-label="recipe"></Avatar>
         }
-        title={userName}
+        title={userName || "Unknown"}
         subheader={`By ${userName} on ${time} `}
       />
       <CardMedia component="img" height="194" image={image} alt="Blog Banner" />
