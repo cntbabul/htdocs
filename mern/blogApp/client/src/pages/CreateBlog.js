@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Box, Button, InputLabel, TextField, Typography } from "@mui/material";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const CreateBlog = () => {
   const id = localStorage.getItem("token");
@@ -27,7 +28,7 @@ const CreateBlog = () => {
         user: id,
       });
       if (data?.success) {
-        alert("Blog created ");
+        toast.success("Blog created ");
         navigate("/my-blogs");
       }
     } catch (error) {
@@ -52,12 +53,7 @@ const CreateBlog = () => {
             Create a Blog
           </Typography>
           <InputLabel
-            sx={{
-              mb: 1,
-              mt: 2,
-              fontSize: "18px",
-              fontWeight: "bold",
-            }}
+            sx={{ mb: 1, mt: 2, fontSize: "24px", fontWeight: "bold" }}
           >
             Title:
           </InputLabel>
