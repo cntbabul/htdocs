@@ -45,7 +45,7 @@ const ApplyDoctor = () => {
   return (
     <Layout>
       <h1 className="text-center">ApplyDoctor</h1>
-      <Form layout="vertical" onFinish={handleFinish}>
+      <Form layout="vertical" onFinish={handleFinish} className="m-3">
         <h4 className="text-dark"> Personal Details</h4>
         <hr className="success" />{" "}
         <Row gutter={20}>
@@ -144,15 +144,17 @@ const ApplyDoctor = () => {
             </Form.Item>
           </Col>
           <Col xs={24} md={24} lg={8}>
-            <Form.Item
-              label="Timings"
-              name="timings"
-              required
-              //   rules={[{ required: true }]}
-            >
-              <TimePicker.RangePicker format="HH:mm A" />
+            <Form.Item label="Timings" name="timings" required>
+              <TimePicker.RangePicker
+                format="HH:mm"
+                defaultValue={[
+                  moment("00:00", "HH:mm"),
+                  moment("00:00", "HH:mm"),
+                ]}
+              />
             </Form.Item>
           </Col>
+
           <Col xs={24} md={24} lg={8}>
             <button className="btn btn-primary form-button ">Submit</button>
           </Col>
