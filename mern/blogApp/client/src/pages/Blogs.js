@@ -22,6 +22,7 @@ const Blogs = () => {
 
   return (
     <>
+<<<<<<< HEAD
       {blogs &&
         blogs.map((blog) => (
           <BlogCard
@@ -35,6 +36,23 @@ const Blogs = () => {
             time={blog?.createdAt}
           />
         ))}
+=======
+      <div>
+        {blogs &&
+          blogs.map((blog) => (
+            <BlogCard
+              id={blog?._id}
+              isUser={localStorage.getItem("token") === blog?.user?._id}
+              title={blog?.title}
+              description={blog?.description}
+              image={blog?.image}
+              // username={blog?.user?.username}
+              userName={blog?.user?.userName}
+              time={blog.createdAt}
+            />
+          ))}
+      </div>
+>>>>>>> 071011f9e65f8c6381d007b45e9d76300fb7bab8
     </>
   );
 };

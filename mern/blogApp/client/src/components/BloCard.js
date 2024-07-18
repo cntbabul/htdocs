@@ -11,7 +11,11 @@ import { blue } from "@mui/material/colors";
 import { Box, IconButton } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+<<<<<<< HEAD
 // import { toast } from "react-toastify";
+=======
+import { toast } from "react-hot-toast";
+>>>>>>> 071011f9e65f8c6381d007b45e9d76300fb7bab8
 
 export default function BlogCard({
   title,
@@ -42,6 +46,19 @@ export default function BlogCard({
     }
   };
 
+  const handleDelete = async () => {
+    try {
+      const { data } = await axios.delete(`/api/v1/blog/delete-blog/${id}`);
+      if (data?.success) {
+        toast.success("Blog Deleted Successfully");
+        // navigate("/my-blogs");
+        window.location.reload();
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <Card
       sx={{
@@ -63,6 +80,7 @@ export default function BlogCard({
           </IconButton>
           <IconButton onClick={handleDelete}>
             <DeleteForeverIcon
+              onClick={handleDelete}
               sx={{ float: "right", cursor: "pointer", mr: 1 }}
               color="error"
             />
@@ -74,7 +92,7 @@ export default function BlogCard({
         avatar={
           <Avatar sx={{ bgcolor: blue[500] }} aria-label="recipe"></Avatar>
         }
-        title={userName}
+        title={userName || "Unknown"}
         subheader={`By ${userName} on ${time} `}
       />
       <CardMedia component="img" height="194" image={image} alt="Blog Banner" />

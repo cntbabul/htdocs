@@ -11,20 +11,27 @@ import {
 import { authActions } from "../redux/Store";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const Header = () => {
   const navigate = useNavigate();
   //global state
+<<<<<<< HEAD
   const isLogin = useSelector((state) => state.isLogin);
   // isLogin = isLogin || localStorage.getItem("token");
+=======
+  let isLogin = useSelector((state) => state.isLogin);
+  isLogin = isLogin || localStorage.getItem("token");
+>>>>>>> 071011f9e65f8c6381d007b45e9d76300fb7bab8
   const dispatch = useDispatch();
   const [value, setValue] = useState();
 
   const handleLogout = () => {
     try {
       dispatch(authActions.logout());
-      alert("Logged out Successfuly");
+      toast.success("Logged out Successfuly");
       navigate("/login");
+      localStorage.removeItem("token");
     } catch (error) {
       console.log(error);
     }
