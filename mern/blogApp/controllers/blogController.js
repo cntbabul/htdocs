@@ -9,6 +9,7 @@ exports.getAllBlogs = async (req, res) => {
     if (!blogs) {
       return res.status(400).json({ success: false, message: "No blog found" });
     }
+    console.log(blogs);
     res.status(200).json({
       blogCount: blogs.length,
       success: true,

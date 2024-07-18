@@ -10,6 +10,8 @@ import Typography from "@mui/material/Typography";
 import { blue } from "@mui/material/colors";
 import { Box, IconButton } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+// import { toast } from "react-toastify";
 
 export default function BlogCard({
   title,
@@ -23,6 +25,21 @@ export default function BlogCard({
   const navigate = useNavigate();
   const handleEdit = async () => {
     navigate(`/blog-details/${id}`);
+  };
+  //delete blog
+  const handleDelete = async () => {
+    try {
+      const { data } = await axios.delete(`/api/v1/blog/delete-blog/${id}`);
+      if (data?.success) {
+        alert("Blog Deleted Successfully");
+        // navigate("/my-blogs");
+        window.location.reload();
+      } else {
+        alert(data?.message);
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -44,7 +61,7 @@ export default function BlogCard({
               color="warning"
             />
           </IconButton>
-          <IconButton>
+          <IconButton onClick={handleDelete}>
             <DeleteForeverIcon
               sx={{ float: "right", cursor: "pointer", mr: 1 }}
               color="error"

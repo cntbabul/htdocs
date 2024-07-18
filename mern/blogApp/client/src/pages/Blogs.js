@@ -25,14 +25,14 @@ const Blogs = () => {
       {blogs &&
         blogs.map((blog) => (
           <BlogCard
-            id={blog._id}
+            id={blog?._id}
             is
-            User={localStorage.getItem("token") === blog.user._id}
-            title={blog.title}
-            description={blog.description}
-            image={blog.image}
-            userName={blog.user.userName}
-            time={blog.createdAt}
+            User={localStorage.getItem("token") === blog?.user._id}
+            title={blog?.title}
+            description={blog?.description}
+            image={blog?.image}
+            userName={blog?.user.userName}
+            time={blog?.createdAt}
           />
         ))}
     </>
